@@ -1,0 +1,147 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+    <script src="main.js"></script>
+</head>
+<body>
+  <div class="container">
+      <h1 class="center-align">My Contacts</h1>
+      <input type="text" id='filter'placeholder="search names .....">
+      <ul class="collection with-header" id="names">
+          <li class="collection-header">
+              <h5>A</h5>
+          </li>
+          <li class="collection-items">
+              <a href="">Akum</a>
+          </li>
+          <li class="collection-items">
+                <a href="">Aben</a>
+            </li>
+            <li class="collection-items">
+                    <a href="">Adama</a>
+                </li>
+                <li class="collection-items">
+                        <a href="">Agum</a>
+                    </li>
+                    <li class="collection-items">
+                            <a href="">Ache</a>
+                        </li>
+                        <li class="collection-items">
+                                <a href="">Achu</a>
+                            </li>
+                            <li class="collection-items">
+                                    <a href="">Anyi</a>
+                                </li>
+                                <li class="collection-items">
+                                        <a href="">Anyere</a>
+                                    </li>
+                                    <li class="collection-items">
+                                            <a href="">Akongwi</a>
+                                        </li>
+                                        <li class="collection-items">
+                                                <a href="">Afah</a>
+                                            </li>
+                                            <li class="collection-header">
+                                                    <h5>B</h5>
+                                                </li>
+                                                <li class="collection-items">
+                                                    <a href="">Blaise</a>
+                                                </li>
+                                                <li class="collection-items">
+                                                      <a href="">Bryan</a>
+                                                  </li>
+                                                  <li class="collection-items">
+                                                          <a href="">Binda</a>
+                                                      </li>
+                                                      <li class="collection-items">
+                                                              <a href="">Banda</a>
+                                                          </li>
+                                                          <li class="collection-items">
+                                                                  <a href="">Brenda</a>
+                                                              </li>
+                                                              <li class="collection-items">
+                                                                      <a href="">Bryanna</a>
+                                                                  </li>
+                                                                  <li class="collection-items">
+                                                                          <a href="">Basil</a>
+                                                                      </li>
+                                                                      <li class="collection-items">
+                                                                              <a href="">Banaba</a>
+                                                                          </li>
+                                                                          <li class="collection-items">
+                                                                                  <a href="">Brice</a>
+                                                                              </li>
+                                                                              <li class="collection-items">
+                                                                                      <a href="">Bride</a>
+                                                                                  </li>
+                                                                                  <li class="collection-header">
+                                                                                        <h5>C</h5>
+                                                                                    </li>
+                                                                                    <li class="collection-items">
+                                                                                        <a href="">Carine</a>
+                                                                                    </li>
+                                                                                    <li class="collection-items">
+                                                                                          <a href="">Calvin</a>
+                                                                                      </li>
+                                                                                      <li class="collection-items">
+                                                                                              <a href="">Calma</a>
+                                                                                          </li>
+                                                                                          <li class="collection-items">
+                                                                                                  <a href="">Celine</a>
+                                                                                              </li>
+                                                                                              <li class="collection-items">
+                                                                                                      <a href="">Clement</a>
+                                                                                                  </li>
+                                                                                                  <li class="collection-items">
+                                                                                                          <a href="">Clarise</a>
+                                                                                                      </li>
+                                                                                                      <li class="collection-items">
+                                                                                                              <a href="">Chris</a>
+                                                                                                          </li>
+                                                                                                          <li class="collection-items">
+                                                                                                                  <a href="">Christain</a>
+                                                                                                              </li>
+                                                                                                              <li class="collection-items">
+                                                                                                                      <a href="">Choima</a>
+                                                                                                                  </li>
+                                                                                                                  <li class="collection-items">
+                                                                                                                          <a href="">Chommy</a>
+                                                                                                                      </li>
+                                                                          
+                                      
+
+      </ul>
+  </div>
+  <script type=text/javascript>
+  //get input element
+  var filter=document.getElementById('filter');
+  //add event listeners
+  filter.addEventListener('keyup',filtername);
+  function filtername(){
+      //get value of input
+      var filtervalue=document.getElementById('filter').value.toUpperCase();
+    //get ul 
+    let ul=document.getElementById('names');
+    //get lis from ul
+    let li=ul.querySelectorAll('li.collection-items');
+  
+  //loop through collection
+  for(let i=0;i<li.length;i++){
+      let a=li[i].getElementsByTagName('a')[0];
+      //if matched
+      if(a.innerHTML.toUpperCase().indexOf(filtervalue)>-1){
+        li[i].style.display="";
+      }else{
+        li[i].style.display="none";
+      }
+    }
+  }
+  </script>
+</body>
+</html>
